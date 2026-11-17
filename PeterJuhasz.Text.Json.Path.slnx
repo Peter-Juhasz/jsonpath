@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/PeterJuhasz.Text.Json.Path/PeterJuhasz.Text.Json.Path.csproj" />
+  <Project Path="tests/PeterJuhasz.Text.Json.Path.Tests/PeterJuhasz.Text.Json.Path.Tests.csproj" />
+  <Project Path="benchmarks/PeterJuhasz.Text.Json.Path.Benchmarks/PeterJuhasz.Text.Json.Path.Benchmarks.csproj" />
+</Solution>

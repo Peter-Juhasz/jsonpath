@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<RootNamespace>PeterJuhasz.Text.Json.Path</RootNamespace>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<PackageId>PeterJuhasz.Text.Json.Path</PackageId>
+		<Description>JSONPath (RFC 9535) queries over System.Text.Json JsonDocument and JsonElement.</Description>
+		<PackageTags>json;jsonpath;rfc9535;system.text.json</PackageTags>
+		<PackageProjectUrl>https://github.com/Peter-Juhasz/jsonpath</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Peter-Juhasz/jsonpath</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<IsTrimmable>true</IsTrimmable>
+		<IsAotCompatible>true</IsAotCompatible>
+		<EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
+		<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration) == 'Release'">
+		<TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="PeterJuhasz.Extensions" Version="2.*-*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="PeterJuhasz.Text.Json.Path.Tests" />
+		<InternalsVisibleTo Include="PeterJuhasz.Text.Json.Path.Benchmarks" />
+	</ItemGroup>
+
+</Project>

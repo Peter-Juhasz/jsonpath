@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BenchmarkDotNet" Version="0.16.0-preview.2" />
+		<PackageReference Include="JsonPath.Net" Version="3.1.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\PeterJuhasz.Text.Json.Path\PeterJuhasz.Text.Json.Path.csproj" />
+	</ItemGroup>
+
+</Project>

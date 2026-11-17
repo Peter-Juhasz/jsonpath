@@ -1,0 +1,63 @@
+root = true
+
+[*]
+end_of_line = crlf
+tab_width = 4
+indent_style = tab
+max_line_length = 320
+charset = utf-8-bom
+
+[.github/**.md]
+charset = utf-8
+
+[*.{csproj,vbproj,props,slnx}]
+
+[*.json]
+charset = utf-8
+
+[*.{yml,yaml}]
+tab_width = 2
+indent_size = 2
+indent_style = space
+
+[*.{cs,vb,fs}]
+csharp_style_namespace_declarations = file_scoped:warning
+
+# CA1032: Implement standard exception constructors
+dotnet_diagnostic.CA1032.severity = none
+
+# IDE0017: Simplify object initialization
+dotnet_style_object_initializer = false:suggestion
+
+# IDE0028: Simplify collection initialization
+dotnet_style_collection_initializer = false:suggestion
+
+# CA1711: Identifiers should not have incorrect suffix
+dotnet_diagnostic.CA1711.severity = none
+
+# CA1034: Nested types should not be visible
+dotnet_diagnostic.CA1034.severity = none
+
+# CA1063: Implement IDisposable Correctly
+dotnet_diagnostic.CA1063.severity = none
+
+# CA1716: Identifiers should not match keywords (selectors and expressions use the terminology of RFC 9535)
+dotnet_diagnostic.CA1716.severity = none
+
+# CA1720: Identifier contains type name (RFC 9535 names its types like ValueType and LogicalType)
+dotnet_diagnostic.CA1720.severity = none
+
+dotnet_diagnostic.CS9107.severity = none
+
+# The given expression is never of the provided type
+dotnet_diagnostic.CS0184.severity = error
+
+[tests/**.cs]
+# Test method names are descriptive sentences with underscores.
+dotnet_diagnostic.CA1707.severity = none
+# Test data is declared inline.
+dotnet_diagnostic.CA1861.severity = none
+
+[benchmarks/**.cs]
+# Benchmark methods must be instance methods.
+dotnet_diagnostic.CA1822.severity = none
